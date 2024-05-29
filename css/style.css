@@ -608,7 +608,10 @@ a {
 
 @media screen and (max-width: 400px) {
     .slide > a > img {
-        width: 100vw;
+        width: 100%;
+    }
+    .slide > a {
+        padding: 10px;
     }
     #carousel {
         margin-top: 240px;
