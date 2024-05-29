@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <script type="module" src="/js/utils.js" defer></script>
+    <script type="module" src="/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/d753c6feaf.js" crossorigin="anonymous"></script>
+    <title>New Post - Gameworld</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="logo"><a href="index.html"><img src="/images/gameworld-logo-white.png" alt="gameworld logo"></a></li>
+                <li id="allposts"><a href="allposts.html"><i class="fa-solid fa-layer-group"></i> All posts</a></li>
+                <li id="make"><a href="make.html"><i class="fa-solid fa-square-plus"></i> New Post</a></li>
+                <li id="loginElement"><a href="login.html"><i class="fa-solid fa-user"></i> Log in</a></li>
+                <li id="logoutElement"><button id="logout"><i class="fa-solid fa-user"></i> Log out</button></li>
+                <li id="hamburger"><button id="hamburgerButton">Menu <i class="fa-solid fa-bars"></i></button></li>
+                <li id="close"><button id="closeButton">Close <i class="fa-solid fa-xmark"></i></button></li>
+            </ul>
+        </nav>
+        <div id="hamburgerMenu">
+            <nav>
+                <ul>
+                    <li><a href="allposts.html"><i class="fa-solid fa-layer-group"></i> All posts</a></li>
+                    <li id="hamburgerMake"><a href="make.html"><i class="fa-solid fa-square-plus"></i> New Post</a></li>
+                    <li id="hamburgerLoginElement"><a href="login.html"><i class="fa-solid fa-user"></i> Log in</a></li>
+                    <li id="hamburgerLogoutElement"><button id="hLogoutButton"><i class="fa-solid fa-user"></i> Log out</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    <form id="form">
+        <label for "title">Title</label>
+        <input id="blog-title" name="title" type="text">
+        <label for "body">Body</label>
+        <textarea id="blog-body" name="body" type="text"></textarea>
+        <label for "media-url">Media-URL</label>
+        <input id="blog-media-url" name="media-url" type="text">
+        <label for "media-alt">Media-Alt-text</label>
+        <input id="blog-media-alt" name="media-alt" type="text">
+        <button id="createPostButton" type="submit">Create post</button>
+        <span id="postStatus"></span>
+        <span id="titleError"></span>
+        <span id="bodyError"></span>
+        <span id="mediaUrlError"></span>
+        <span id="mediaAltError"></span>
+      </form>
+    </main>
+      <footer>
+    </footer>
+</body>
+</html>

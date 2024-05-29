@@ -1,28 +1,610 @@
+
+
 body {
     padding: 0;
     margin: 0;
-    background-color:black;
-    background-image:url(/images/City-background-monochrome.png);
-    background-repeat:repeat-x;
-    background-position-y: 670px;
     color:white;
+    background-color:black;
+    display:flex;
+    flex-direction:column;
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+main {
+    margin-top: 65px;
+}
+
+header {
+    position:fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+footer {
+    background-color:black;
+    background-image:url(/images/City-background-v2.png);
+    filter:blur(4px);
+    background-repeat:repeat-x;
+    position:fixed;
+    bottom: 0px;
+    height: 430px;
+    width: 100%;
+    z-index:-1;
+    flex-shrink: 0;
+    opacity: 50%;
+}
+
+
 
 /* Nav menu, header */
 nav ul {
-    background-color:#1F3156;
+    background-color:rgba(19, 30, 53, .8);
     color:white;
     list-style-type: none;
     display:flex;
     flex-direction: row;
     justify-content:space-evenly;
     align-items:center;
-    font-family: sans-serif;
-    font-size: 40px;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     margin: 0;
     padding: 0;
+    font-size: 20px;
+}
+
+nav ul i {
+    color:#41B543;
 }
 
 nav ul img {
-    height: 120px;
+    height: 60px;
+}
+
+nav ul li {
+    transition:300ms;
+}
+
+#logo:hover {
+    transform:scale(1.05);
+}
+
+nav ul li:hover {
+    transform:scale(1.2);
+}
+
+h2, span {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1#banner {
+    background-color:#4167B4;
+    padding: 10px;
+    margin: 0px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:700;
+    font-size: 36px;
+    z-index: 2;
+}
+
+a {
+    text-decoration:none;
+    color:white;
+}
+
+#logout {
+    background:none;
+    border:none;
+    color:white;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    cursor: pointer;
+}
+
+#login {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top: 10%;
+    text-align:center;
+}
+
+#login input, button {
+    resize:none;
+    margin: 10px;
+    width: 500px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#login button {
+    background-color:#41B543;
+    color:white;
+    transition: 300ms;
+}
+
+#login button:hover {
+    color:#41B543;
+    background-color:white;
+}
+
+#myOutput, #allOutput {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content:center;
+    align-items:center;
+}
+
+#viewmore {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+#viewmore > a {
+    background-color:#4167B4;
+    padding: 10px 40px;
+    transition: 300ms;
+}
+
+#viewmore > a:hover {
+    transform:scale(1.05);
+    color:#4167B4;
+    background-color:white;
+}
+
+#form {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding: 20px;
+}
+
+#form button {
+    font-size: 30px;
+    padding: 20px 40px;
+}
+
+#form input, textarea {
+    resize:none;
+    margin: 2px;
+    width: 50vw;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#form textarea {
+    height: 30vh;
+}
+
+#form label {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 30px;
+}
+
+#blog-element {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding: 25px;
+    width: 100%;
+    font-size: 12px;
+}
+
+#blog-element a {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:300ms;
+    padding: 0px;
+    background-color:#1F3156;
+    width: 550px;
+    height: 400px;
+    opacity: 90%;
+}
+
+#blog-element a:hover {
+    transform:scale(1.05);
+    opacity: 100%;
+    background-color:#4167B4;
+}
+
+#blog-element img {
+    width: 500px;
+    height: 300px;
+    object-fit:cover;
+    border: solid 5px #1F3156;
+
+}
+
+#detailedBlog {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin-top: 20px;
+}
+
+#detailedBlog-element {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color:#131e35;
+    width: 80%;
+}
+
+#detailedBlog-element > h1 {
+    background-color:#4167B4;
+    width: 60vw;
+    text-align:center;
+    padding: 10px;
+}
+
+#detailedBlog-element > img, p {
+    width: 60vw;
+}
+
+#deleteButtonElement {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+#maybeDelete, #editPost, #editPostButton {
+    font-size: 40px;
+    width: 400px;
+    padding: 20px 0px;
+    margin-inline: 20px;
+    background-color:#B55341;
+    color:white;
+    transition:300ms;
+}
+
+#editPostButton {
+    width: 50vw;
+}
+
+#maybeDelete:hover {
+    background-color:white;
+    color:#B55341;
+    transform:scale(1.05);
+}
+
+#editPost, #editPostButton {
+    background-color:#4167B4;
+}
+
+#editPost:hover, #editPostButton:hover {
+    background-color:white;
+    color:#4167B4;
+    transform:scale(1.05);
+}
+
+#createPostButton {
+    margin-top: 30px;
+    background-color:#41B543;
+    color:white;
+    transition:300ms;
+    width: 50vw;
+}
+
+#createPostButton:hover {
+    background-color:white;
+    color:#41B543;
+    transform:scale(1.05);
+}
+
+#titleError, #bodyError, #mediaUrlError, #mediaAltError, #postStatus {
+    background-color:#1F3156;
+    padding: 0px;
+    width: 50vw;
+    margin-top: 20px;
+    text-align:center;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+#carousel {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    margin-bottom: 400px;
+    margin-top: 370px;
+}
+
+#carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.slide {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 300ms opacity ease-in-out;
+    transition-delay: 300ms;
+    text-align:center;
+    pointer-events: none;
+}
+
+.slide > a:hover {
+    transform:scale(1.05);
+    background-color:#131e35;
+}
+
+.slide > a > img {
+    width: 70rem;
+    height: 35rem;
+    object-fit:cover;
+    object-position:center;
+    border: 2px solid black;
+}
+
+.slide > a {
+    background-color:rgba(19, 30, 53, .5);
+    transition:600ms;
+    padding: 0px 30px 30px 30px;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    transition-delay: 300ms;
+    pointer-events: auto;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background:none;
+    border:none;
+    font-size: 10rem;
+    margin-block: 50%;
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0, .5rem;
+    background-color: rgba(0, 0, 0, .1);
+    margin-inline: 0%;
+    width: 200px;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color:white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+    outline: 1px solid black;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+#hamburger i, #close i {
+    color:#41B543;
+}
+
+#hamburgerButton, #closeButton, #hLogoutButton {
+    background: none;
+    color:white;
+    font-weight: 900;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#hLogoutButton {
+    cursor: pointer;
+}
+
+#hamburgerMenu {
+    position: absolute;
+    opacity: 0;
+    right: 0px;
+    transition: 300ms ease-in-out;
+}
+
+#hamburgerMenu nav ul {
+    flex-direction: column;
+    background-color: rbga(0, 0, 0, .8);
+    width: 50vw;
+}
+
+#hamburgerMenu nav ul li {
+    padding-block: 30px;
+}
+
+#close {
+    display: none;
+}
+
+/* Media queries */
+@media screen and (max-width: 1800px) {
+    #blog-element {
+        font-size: 10px;
+    }
+
+    #blog-element img {
+        width: 300px;
+        height: 200px;
+    }
+    #blog-element a {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .slide > a > img {
+        width: 70vw;
+    }
+    .carousel-button {
+        transform:scale(0.6);
+    }
+    #myOutput, #allOutput {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .slide > a > img {
+        width: 70vw;
+        height: 30rem;
+    }
+    #carousel {
+        margin-top: 330px;
+    }
+    .carousel-button {
+        transform:scale(0.4);
+    }
+    #detailedBlog-element > h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #hamburgerMenu, #hamburger, #close {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slide > a > img {
+        width: 90vw;
+        height: 20rem;
+    }
+    #carousel {
+        margin-top: 250px;
+        margin-bottom: 300px;
+    }
+    #carousel h2 {
+        font-size: 24px;
+    }
+    .carousel-button {
+        top: 120px;
+        margin-block: 0%;
+    }
+    #myOutput, #allOutput {
+        grid-template-columns: auto;
+    }
+    #allposts, #make, #loginElement, #logoutElement {
+        display: none;
+    }
+    #detailedBlog-element > h1 {
+        font-size: 20px;
+    }
+    h1#banner {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .slide > a > img {
+        width: 90vw;
+    }
+    #carousel {
+        margin-top: 240px;
+    }
+    #carousel h2 {
+        font-size: 16px;
+    }
+    #blog-element {
+        font-size: 8px;
+    }
+    #blog-element img {
+        width: 250px;
+        height: 150px;
+    }
+    #blog-element a {
+        width: 350px;
+        height: 250px;
+    }
+    #form button {
+        font-size: 20px;
+    }
+    span {
+        font-size: 16px;
+    }
+    #maybeDelete, #editPost {
+        font-size: 20px;
+    }
+    #login input, button {
+        width: 80vw;
+    }
+    #detailedBlog-element > h1 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .slide > a > img {
+        width: 100vw;
+    }
+    #carousel {
+        margin-top: 240px;
+    }
+    #carousel h2 {
+        font-size: 12px;
+    }
+    #blog-element {
+        font-size: 6px;
+    }
+    #blog-element img {
+        width: 220px;
+        height: 120px;
+    }
+    #blog-element a {
+        width: 280px;
+        height: 200px;
+    }
+    #form button {
+        font-size: 14px;
+    }
 }

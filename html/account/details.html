@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="/js/details.js" defer></script>
+    <script src="https://kit.fontawesome.com/d753c6feaf.js" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <title>Gameworld</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="logo"><a href="index.html"><img src="/images/gameworld-logo-white.png" alt="gameworld logo"></a></li>
+                <li id="allposts"><a href="allposts.html"><i class="fa-solid fa-layer-group"></i> All posts</a></li>
+                <li id="make"><a href="make.html"><i class="fa-solid fa-square-plus"></i> New Post</a></li>
+                <li id="loginElement"><a href="login.html"><i class="fa-solid fa-user"></i> Log in</a></li>
+                <li id="logoutElement"><button id="logout"><i class="fa-solid fa-user"></i> Log out</button></li>
+                <li id="hamburger"><button id="hamburgerButton">Menu <i class="fa-solid fa-bars"></i></button></li>
+                <li id="close"><button id="closeButton">Close <i class="fa-solid fa-xmark"></i></button></li>
+            </ul>
+        </nav>
+        <div id="hamburgerMenu">
+            <nav>
+                <ul>
+                    <li><a href="allposts.html"><i class="fa-solid fa-layer-group"></i> All posts</a></li>
+                    <li id="hamburgerMake"><a href="make.html"><i class="fa-solid fa-square-plus"></i> New Post</a></li>
+                    <li id="hamburgerLoginElement"><a href="login.html"><i class="fa-solid fa-user"></i> Log in</a></li>
+                    <li id="hamburgerLogoutElement"><button id="hLogoutButton"><i class="fa-solid fa-user"></i> Log out</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="detailedBlog">
+        </div>
+        <span id="deleteButtonElement">
+            <button id="maybeDelete">Delete</button>
+            <button id="editPost">Edit</button>
+        </span>
+        <p id="demo"></p>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
