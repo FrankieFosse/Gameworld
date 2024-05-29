@@ -367,8 +367,26 @@ a {
 }
 
 .slide > a:hover {
+    #blogText {color:rgba(255, 255, 255, 100%)};
+    #blogText {background-color:rgba(0, 0, 0, .5)};
+    #carouselImage {opacity: 80%};
     transform:scale(1.05);
     background-color:#131e35;
+}
+
+#carouselImage {
+    transition: 300ms;
+}
+
+#blogText {
+    color: rgba(255, 255, 255, 0%);
+    position: absolute;
+    top: 70%;
+    font-size: 18px;
+    transition: 300ms;
+    width: 70%;
+    left: 15%;
+    padding: 20px;
 }
 
 .slide > a > img {
@@ -543,6 +561,9 @@ a {
     h1#banner {
         font-size: 24px;
     }
+    #blogText {
+        top: 55%;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -580,6 +601,9 @@ a {
     }
     #detailedBlog-element > h1 {
         font-size: 14px;
+    }
+    #blogText {
+        top: 50%;
     }
 }
 

@@ -45,7 +45,8 @@ return `
     ${startElementTag}
     <a href="details.html?id=${blog.id}">
     <h2>${blog.title}</h2>
-    <img src="${blog.media.url}" alt="${blog.title}">
+    <img id="carouselImage" src="${blog.media.url}" alt="${blog.title}">
+    <p id="blogText">${blog.body.slice(0, 120)}...</p>
     </a>
     </li>
     
