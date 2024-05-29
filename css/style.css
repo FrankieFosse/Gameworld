@@ -464,8 +464,7 @@ a {
 
 #hamburgerMenu {
     position: absolute;
-    opacity: 0;
-    right: 0px;
+    right: -500px;
     transition: 300ms ease-in-out;
 }
 

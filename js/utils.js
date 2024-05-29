@@ -9,7 +9,7 @@ const hLogIn = document.getElementById("hamburgerLoginElement");
 const hLogOut = document.getElementById("hamburgerLogoutElement");
 
 function openMenu() {
-    hMenu.style.opacity = "1";
+    hMenu.style.right = "0px";
     close.style.display = "flex";
     hamburger.style.display = "none";
 }
@@ -17,7 +17,7 @@ function openMenu() {
 hButton.addEventListener('click', openMenu);
 
 function closeMenu() {
-    hMenu.style.opacity = "0";
+    hMenu.style.right = "-500px";
     close.style.display = "none";
     hamburger.style.display = "flex";
 }
