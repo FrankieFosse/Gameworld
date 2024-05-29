@@ -280,7 +280,7 @@ a {
     padding-bottom: 50px;
 }
 
-#maybeDelete, #editPost, #editPostButton {
+#maybeDelete, #editPost, #editPostButton, #cancelButton {
     font-size: 40px;
     width: 400px;
     padding: 20px 0px;
@@ -290,11 +290,11 @@ a {
     transition:300ms;
 }
 
-#editPostButton {
+#editPostButton, #cancelButton {
     width: 50vw;
 }
 
-#maybeDelete:hover {
+#maybeDelete:hover, #cancelButton:hover {
     background-color:white;
     color:#B55341;
     transform:scale(1.05);

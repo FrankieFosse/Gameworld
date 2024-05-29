@@ -10,10 +10,15 @@ const blogBody = document.getElementById("blog-body");
 const blogMediaUrl = document.getElementById("blog-media-url");
 const blogMediaAlt = document.getElementById("blog-media-alt");
 
-
+const cancel = document.getElementById("cancelButton");
 
 const editPostButton = document.getElementById("editPostButton");
 
+function cancelEdit() {
+    history.back();
+}
+
+cancel.addEventListener('click', cancelEdit);
 
 async function editClick() {
 
@@ -71,3 +76,4 @@ async function getBlogById() {
 }
 
 getBlogById();
+
