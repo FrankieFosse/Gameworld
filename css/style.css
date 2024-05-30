@@ -491,6 +491,8 @@ h1#banner {
 }
 
 
+
+/* Loading animation */
 .loader {
     position: fixed;
     top: 0;
@@ -529,8 +531,6 @@ h1#banner {
         transform: rotate(1turn);
     }
 }
-
-
 
 
 
