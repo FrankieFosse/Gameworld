@@ -223,6 +223,10 @@ h1#banner {
     width: 60vw;
 }
 
+#blogURL {
+    overflow:auto;
+}
+
 #copyStatus {
     visibility: hidden;
     width: 20%;

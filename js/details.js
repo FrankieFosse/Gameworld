@@ -35,7 +35,7 @@ function listFullBlog(blog, out) {
     <p>Created: ${blog.data.created}</p>
     <p>Updated: ${blog.data.updated}</p>
     <div>
-    <p id="copyURL">URL: https://gameworld-exam.netlify.app/html/post/details.html?id=${id}</p>
+    <p id="blogURL">URL: https://gameworld-exam.netlify.app/html/post/details.html?id=${id}</p>
     <button id="copyButton"><i class="fa-solid fa-copy"></i> Copy URL</button>
     <div id="copyStatus"><i class="fa-solid fa-check"></i> Copied to clipboard</div>
     </div>
