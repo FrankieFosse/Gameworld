@@ -53,6 +53,7 @@ a {
 /* Nav menu, header */
 nav ul {
     background-color:rgba(19, 30, 53, .8);
+    backdrop-filter:blur(4px);
     color:white;
     list-style-type: none;
     display:flex;
