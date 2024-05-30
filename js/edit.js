@@ -60,15 +60,11 @@ async function getBlogById() {
         const response = await fetch(url + id);
 
         const responseData = await response.json();
-        console.log(responseData);
-        console.log(responseData.data.title);
         document.title = responseData.data.title + " - Gameworld"
         blogTitle.value = responseData.data.title;
         blogBody.value = responseData.data.body;
         blogMediaUrl.value = responseData.data.media.url;
         blogMediaAlt.value = responseData.data.media.alt;
-
-
 
     } catch(error) {
         console.error(error);

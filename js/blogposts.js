@@ -21,10 +21,14 @@ const latestTwelveBlogs = test.data
 
 
 
+
+
+// Latest 12 posts grid
+
 myOutput.innerHTML = latestTwelveBlogs.map(blog => {
     return `
     <div id="blog-element">
-    <a href="details.html?id=${blog.id}">
+    <a href="/html/post/details.html?id=${blog.id}">
     <h1>${blog.title}</h1>
     <img id="blogImage" src=${blog.media?.url ? blog.media?.url : "images/no-image.jfif" }/>
     </a>
@@ -33,6 +37,10 @@ myOutput.innerHTML = latestTwelveBlogs.map(blog => {
 }).join(" ")
         
 
+
+
+
+// Carousel
 
 imageOutput.innerHTML = latestBlogs.map((blog, index) => {
 let startElementTag = '<li class="slide">';

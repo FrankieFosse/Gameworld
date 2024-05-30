@@ -1,9 +1,3 @@
-
-
-
-
-
-
 function getInput(e) {
     const blogTitleInput = document.getElementById("blog-title");
     const blogBodyInput = document.getElementById("blog-body");
@@ -110,66 +104,3 @@ async function createBlog(data) {
 
     }
 }
-
-
-
-// Logout
-
-
-
-
-
-
-
-
-/*const newBlog = {
-    title: 'nine',
-    body: 'nine-body'
-};
-
-fetch(`https://v2.api.noroff.dev/blog/posts/Frankie/`, {
-    method: "POST",
-    headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem("token")}`
-    },
-    body: JSON.stringify(newBlog);
-})
-.then(res => res.json())
-.then(data => {
-    console.log(data.data[1].title)
-}) 
-*/
-
-
-/*
-}*/
-
-/* {
-    "title": "string", // Required
-    "body": "string", // Optional
-    "tags": ["string"], // Optional
-    "media": {
-      "url": "https://url.com/image.jpg",
-      "alt": "string"
-    } // Optional
-  } */
-
- /* fetch('https://v2.api.noroff.dev/blog/posts/Frankie', {
-    method: "POST",
-    body: JSON.stringify({
-
-
-
-
-
-    }),
-    headers: {
-"content-type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`
-    }
-})
-.then(res => res.json())
-.then(data => console.log(data))
-.catch(err => console.log(err));
-})  */

@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="/css/style.css">
-    <script type="module" src="/js/edit.js" defer></script>
-    <script type="module" src="/js/utils.js" defer></script>
+    <script type="module" src="/js/edit.js"></script>
+    <script type="module" src="/js/utils.js"></script>
     <script src="https://kit.fontawesome.com/d753c6feaf.js" crossorigin="anonymous"></script>
     <title>Edit Post - Gameworld</title>
 </head>
@@ -37,23 +37,23 @@
         </div>
     </header>
     <main>
-    <form id="form">
-        <label for "title">Title</label>
-        <input id="blog-title" name="title" type="text">
-        <label for "body">Body</label>
-        <textarea id="blog-body" name="body" type="text"></textarea>
-        <label for "media-url">Media-URL</label>
-        <input id="blog-media-url" name="media-url" type="text">
-        <label for "media-alt">Media-Alt-text</label>
-        <input id="blog-media-alt" name="media-alt" type="text">
-        <button id="editPostButton" type="button">Edit post</button>
-        <button id="cancelButton" type="button">Cancel</button>
-        <span id="postStatus"></span>
-        <span id="titleError"></span>
-        <span id="bodyError"></span>
-        <span id="mediaUrlError"></span>
-        <span id="mediaAltError"></span>
-      </form>
+        <form id="form">
+            <label for="blog-title">Title</label>
+            <input id="blog-title" name="title" type="text">
+            <label for="blog-body">Body</label>
+            <textarea id="blog-body" name="body"></textarea>
+            <label for="blog-media-url">Media-URL</label>
+            <input id="blog-media-url" name="media-url" type="text">
+            <label for="blog-media-alt">Media-Alt-text</label>
+            <input id="blog-media-alt" name="media-alt" type="text">
+            <button id="editPostButton" type="button">Edit post</button>
+            <button id="cancelButton" type="button">Cancel</button>
+            <span id="postStatus"></span>
+            <span id="titleError"></span>
+            <span id="bodyError"></span>
+            <span id="mediaUrlError"></span>
+            <span id="mediaAltError"></span>
+          </form>
     </main>
       <footer>
     </footer>

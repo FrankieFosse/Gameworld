@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="/css/style.css">
-    <script type="module" src="/js/utils.js" defer></script>
-    <script type="module" src="/js/script.js" defer></script>
+    <script type="module" src="/js/utils.js"></script>
+    <script type="module" src="/js/script.js"></script>
     <script src="https://kit.fontawesome.com/d753c6feaf.js" crossorigin="anonymous"></script>
     <title>New Post - Gameworld</title>
 </head>
@@ -38,13 +38,13 @@
     </header>
     <main>
     <form id="form">
-        <label for "title">Title</label>
+        <label for="blog-title">Title</label>
         <input id="blog-title" name="title" type="text">
-        <label for "body">Body</label>
-        <textarea id="blog-body" name="body" type="text"></textarea>
-        <label for "media-url">Media-URL</label>
+        <label for="blog-body">Body</label>
+        <textarea id="blog-body" name="body"></textarea>
+        <label for="blog-media-url">Media-URL</label>
         <input id="blog-media-url" name="media-url" type="text">
-        <label for "media-alt">Media-Alt-text</label>
+        <label for="blog-media-alt">Media-Alt-text</label>
         <input id="blog-media-alt" name="media-alt" type="text">
         <button id="createPostButton" type="submit">Create post</button>
         <span id="postStatus"></span>
