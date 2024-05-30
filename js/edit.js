@@ -42,7 +42,7 @@ async function editClick() {
                 }
             })
         });
-        window.location.href = "/html/account/index.html";
+        window.location.href = "/html/index.html";
     } catch(error) {
         console.error(error);
     }

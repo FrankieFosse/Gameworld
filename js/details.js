@@ -159,7 +159,7 @@ const clickHandler = async () => {
                 Authorization: `Bearer ${localStorage.getItem("token")}`
             }
         });
-        window.location.href = "index.html";
+        window.location.href = "/html/index.html";
     } catch(error) {
         console.error(error);
     }

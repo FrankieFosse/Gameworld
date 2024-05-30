@@ -1,5 +1,4 @@
-
-
+/* General */
 body {
     padding: 0;
     margin: 0;
@@ -34,6 +33,19 @@ footer {
     z-index:-1;
     flex-shrink: 0;
     opacity: 50%;
+}
+
+h2, span {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    text-decoration:none;
+    color:white;
 }
 
 
@@ -75,14 +87,6 @@ nav ul li:hover {
     transform:scale(1.2);
 }
 
-h2, span {
-    font-size: 30px;
-}
-
-p {
-    font-size: 20px;
-}
-
 h1#banner {
     background-color:#4167B4;
     padding: 10px;
@@ -95,11 +99,9 @@ h1#banner {
     z-index: 2;
 }
 
-a {
-    text-decoration:none;
-    color:white;
-}
 
+
+/* Login, logout */
 #logout {
     background:none;
     border:none;
@@ -144,67 +146,14 @@ a {
     background-color:white;
 }
 
+
+
+/*Blog elements*/
 #myOutput, #allOutput {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content:center;
     align-items:center;
-}
-
-#viewmore {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    margin-bottom: 50px;
-    font-size: 30px;
-}
-
-#viewmore > a {
-    background-color:#4167B4;
-    padding: 10px 40px;
-    transition: 300ms;
-}
-
-#viewmore > a:hover {
-    transform:scale(1.05);
-    color:#4167B4;
-    background-color:white;
-}
-
-#form {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding: 20px;
-}
-
-#form button {
-    font-size: 30px;
-    padding: 20px 40px;
-}
-
-#form input, textarea {
-    resize:none;
-    margin: 2px;
-    width: 50vw;
-    padding: 10px;
-    font-size: 20px;
-    font-family: "Play", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-#form textarea {
-    height: 30vh;
-}
-
-#form label {
-    font-family: "Play", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 30px;
 }
 
 #blog-element {
@@ -272,6 +221,68 @@ a {
     width: 60vw;
 }
 
+
+
+/* Forms */
+#form {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding: 20px;
+}
+
+#form button {
+    font-size: 30px;
+    padding: 20px 40px;
+}
+
+#form input, textarea {
+    resize:none;
+    margin: 2px;
+    width: 50vw;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#form textarea {
+    height: 30vh;
+}
+
+#form label {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 30px;
+}
+
+
+
+/* Buttons */
+#viewmore {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+#viewmore > a {
+    background-color:#4167B4;
+    padding: 10px 40px;
+    transition: 300ms;
+}
+
+#viewmore > a:hover {
+    transform:scale(1.05);
+    color:#4167B4;
+    background-color:white;
+}
+
 #deleteButtonElement {
     display:flex;
     justify-content:center;
@@ -332,6 +343,9 @@ a {
     text-align:center;
 }
 
+
+
+/* Carousel */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -443,6 +457,9 @@ a {
     right: 1rem;
 }
 
+
+
+/* Hamburger menu */
 #hamburger i, #close i {
     color:#41B543;
 }
@@ -470,7 +487,8 @@ a {
 
 #hamburgerMenu nav ul {
     flex-direction: column;
-    background-color: rbga(0, 0, 0, .8);
+    background-color:rgba(10, 10, 10, 80%);
+    backdrop-filter: blur(2px);
     width: 50vw;
 }
 
@@ -481,6 +499,8 @@ a {
 #close {
     display: none;
 }
+
+
 
 /* Media queries */
 @media screen and (max-width: 1800px) {
@@ -533,8 +553,11 @@ a {
 }
 
 @media screen and (max-width: 900px) {
-    .slide > a > img {
+    .slide > a {
         width: 90vw;
+    }
+    .slide > a > img {
+        width: 80vw;
         height: 20rem;
     }
     #carousel {
@@ -563,11 +586,17 @@ a {
     #blogText {
         top: 55%;
     }
+    #form input, textarea {
+        width: 80vw;
+    }
 }
 
 @media screen and (max-width: 500px) {
-    .slide > a > img {
+    .slide > a {
         width: 90vw;
+    }
+    .slide > a > img {
+        width: 80vw;
     }
     #carousel {
         margin-top: 240px;
@@ -604,6 +633,15 @@ a {
     #blogText {
         top: 50%;
     }
+    #detailedBlog-element {
+        width: 95%;
+    }
+    #detailedBlog-element > h1 {
+        width: 80vw;
+    }
+    #detailedBlog-element > img, p {
+        width: 80vw;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -631,6 +669,6 @@ a {
         height: 200px;
     }
     #form button {
-        font-size: 14px;
+        font-size: 16px;
     }
 }

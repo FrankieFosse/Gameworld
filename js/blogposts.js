@@ -43,7 +43,7 @@ if (index === 0) {
 return `
     
     ${startElementTag}
-    <a href="details.html?id=${blog.id}">
+    <a href="/html/post/details.html?id=${blog.id}">
     <h2>${blog.title}</h2>
     <img id="carouselImage" src="${blog.media.url}" alt="${blog.title}">
     <p id="blogText">${blog.body.slice(0, 120)}...</p>

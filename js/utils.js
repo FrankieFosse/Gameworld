@@ -41,12 +41,12 @@ export const ifLoggedIn = () => {
         logOutButton.addEventListener("click", () => {
             localStorage.removeItem("token");
             localStorage.removeItem("email");
-            window.location = "index.html";
+            window.location = "/html/index.html";
         });
         hLogOutButton.addEventListener("click", () => {
             localStorage.removeItem("token");
             localStorage.removeItem("email");
-            window.location = "index.html";
+            window.location = "/html/index.html";
         });
     } else {
         console.log("Not logged in");

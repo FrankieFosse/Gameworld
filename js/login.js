@@ -31,7 +31,7 @@ async function getToken(email, password) {
             localStorage.setItem("email", email);
             localStorage.setItem("password", password);
             localStorage.setItem("token", data.data.accessToken);
-            window.location = "index.html";
+            window.location = "/html/index.html";
         } else {
             throw new Error(response.statusText),
             out.innerHTML = "Wrong username or password";

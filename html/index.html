@@ -6,20 +6,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="/js/allposts.js" defer></script>
     <script type="module" src="/js/utils.js" defer></script>
+    <script type="module" src="/js/script.js" defer></script>
+    <script type="module" src="/js/carousel.js" defer></script>
+    <script type="module" src="/js/blogposts.js" defer></script>
     <script src="https://kit.fontawesome.com/d753c6feaf.js" crossorigin="anonymous"></script>
     <link type="text/css" rel="stylesheet" href="/css/style.css">
-    <title>All posts - Gameworld</title>
+    <title>Gameworld</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li id="logo"><a href="index.html"><img src="/images/gameworld-logo-white.png" alt="gameworld logo"></a></li>
-                <li id="allposts"><a href="allposts.html"><i class="fa-solid fa-layer-group"></i> All posts</a></li>
-                <li id="make"><a href="make.html"><i class="fa-solid fa-square-plus"></i> New Post</a></li>
-                <li id="loginElement"><a href="login.html"><i class="fa-solid fa-user"></i> Log in</a></li>
+                <li id="allposts"><a href="/html/post/allposts.html"><i class="fa-solid fa-layer-group"></i> All posts</a></li>
+                <li id="make"><a href="/html/post/make.html"><i class="fa-solid fa-square-plus"></i> New Post</a></li>
+                <li id="loginElement"><a href="/html/account/login.html"><i class="fa-solid fa-user"></i> Log in</a></li>
                 <li id="logoutElement"><button id="logout"><i class="fa-solid fa-user"></i> Log out</button></li>
                 <li id="hamburger"><button id="hamburgerButton">Menu <i class="fa-solid fa-bars"></i></button></li>
                 <li id="close"><button id="closeButton">Close <i class="fa-solid fa-xmark"></i></button></li>
@@ -28,17 +30,30 @@
         <div id="hamburgerMenu">
             <nav>
                 <ul>
-                    <li><a href="allposts.html"><i class="fa-solid fa-layer-group"></i> All posts</a></li>
-                    <li id="hamburgerMake"><a href="make.html"><i class="fa-solid fa-square-plus"></i> New Post</a></li>
-                    <li id="hamburgerLoginElement"><a href="login.html"><i class="fa-solid fa-user"></i> Log in</a></li>
+                    <li><a href="/html/post/allposts.html"><i class="fa-solid fa-layer-group"></i> All posts</a></li>
+                    <li id="hamburgerMake"><a href="/html/post/make.html"><i class="fa-solid fa-square-plus"></i> New Post</a></li>
+                    <li id="hamburgerLoginElement"><a href="/html/account/login.html"><i class="fa-solid fa-user"></i> Log in</a></li>
                     <li id="hamburgerLogoutElement"><button id="hLogoutButton"><i class="fa-solid fa-user"></i> Log out</button></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    <div id="allOutput"></div>
+    <h1 id="banner">Welcome to GAMEWORLD</h1>
+    <section aria-label="Newest Photos">
+        <div id="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#10094;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#10095;</button>
+        <ul data-slides class="slides">
+
+        </ul>
+        </div>
+    </section>
+    <div id="myOutput"></div>
+    <div id="viewmore">
     <div id="deleteButtonElement"></div>
+    <a href="allposts.html">View more</a>
+    </div>
     </main>
     <footer>
     </footer>
