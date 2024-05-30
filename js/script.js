@@ -41,7 +41,7 @@ const createPostButton = document.getElementById("createPostButton");
 const goBackButton = document.getElementById("cancelButton");
 
 function goBack() {
-    history.back();
+    window.location.href = "/html/index.html";
 }
 
 goBackButton.addEventListener('click', goBack)
