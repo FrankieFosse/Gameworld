@@ -675,6 +675,11 @@ h1#banner {
     #detailedBlog-element > img, p {
         width: 80vw;
     }
+    .slide > a:hover {
+        #blogText {color:rgba(255, 255, 255, 0%)};
+        #blogText {background-color:rgba(0, 0, 0, .0)};
+        #carouselImage {opacity: 100%};
+    }
 }
 
 @media screen and (max-width: 400px) {
