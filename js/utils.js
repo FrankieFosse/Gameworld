@@ -1,3 +1,13 @@
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader-hidden");
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild("loader");
+    })
+})
+
 const hButton = document.getElementById("hamburgerButton");
 const hMenu = document.getElementById("hamburgerMenu");
 const hamburger = document.getElementById("hamburger");
