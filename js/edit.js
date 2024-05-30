@@ -10,6 +10,8 @@ const blogBody = document.getElementById("blog-body");
 const blogMediaUrl = document.getElementById("blog-media-url");
 const blogMediaAlt = document.getElementById("blog-media-alt");
 
+const postStatus = document.getElementById("postStatus");
+
 const cancel = document.getElementById("cancelButton");
 
 const editPostButton = document.getElementById("editPostButton");
@@ -42,7 +44,13 @@ async function editClick() {
                 }
             })
         });
-        window.location.href = "/html/index.html";
+        if (!res.ok) {
+            postStatus.innerHTML = "Please provide a valid Media-URL";
+        } else {
+            postStatus.innerHTML = "Post successfully updated!";
+        }
+
+        /*window.location.href = "/html/index.html";*/
     } catch(error) {
         console.error(error);
     }

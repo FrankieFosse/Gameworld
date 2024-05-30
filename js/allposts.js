@@ -1,3 +1,9 @@
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader-hidden");
+})
+
 async function fetchAllPosts() {
     try {
         const allOutput = document.getElementById("allOutput");

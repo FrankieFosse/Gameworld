@@ -1,5 +1,11 @@
 import {ifLoggedIn} from "./utils.js";
 
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader-hidden");
+})
+
 let outElement = document.getElementById("detailedBlog");
 
 let params = new URL (document.location).searchParams;

@@ -30,10 +30,11 @@ myOutput.innerHTML = latestTwelveBlogs.map(blog => {
     <div id="blog-element">
     <a href="/html/post/details.html?id=${blog.id}">
     <h1>${blog.title}</h1>
-    <img id="blogImage" src=${blog.media?.url ? blog.media?.url : "images/no-image.jfif" }/>
+    <img id="blogImage" src=${blog.media.url}/>
     </a>
     </div>
     `
+
 }).join(" ")
         
 

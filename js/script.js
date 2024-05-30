@@ -37,12 +37,19 @@ if(!body.media.alt) error.media.alt = "Please provide Media-Alt-text"
 
 }
 
+const createPostButton = document.getElementById("createPostButton");
+const goBackButton = document.getElementById("cancelButton");
 
+function goBack() {
+    history.back();
+}
+
+goBackButton.addEventListener('click', goBack)
 
 const form = document.getElementById('form');
 
 if (form) {
-document.addEventListener('submit', function (e) {
+createPostButton.addEventListener('click', function (e) {
     e.preventDefault();
     const title = e.target.name = "title"
     const prePayload = new FormData(form);
@@ -98,6 +105,7 @@ async function createBlog(data) {
             mediaUrlError.innerHTML = "Please provide a valid Media-URL";
         } else {
             postStatus.innerHTML = "Post successfully created!"
+            createPostButton.style.display = "none";
         }
     } catch(error) {
         console.error(error);
