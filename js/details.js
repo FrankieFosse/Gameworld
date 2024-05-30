@@ -34,11 +34,26 @@ function listFullBlog(blog, out) {
     <p>Author: ${blog.data.author.name}</p>
     <p>Created: ${blog.data.created}</p>
     <p>Updated: ${blog.data.updated}</p>
+    <div>
+    <p id="copyURL">URL: https://gameworld-exam.netlify.app/html/post/details.html?id=${id}</p>
+    <button id="copyButton"><i class="fa-solid fa-copy"></i> Copy URL</button>
+    <div id="copyStatus"><i class="fa-solid fa-check"></i> Copied to clipboard</div>
+    </div>
     </div>
     `;
     out.innerHTML = newDiv;
+    const buttonCopy = document.getElementById("copyButton");
+    const statusCopy = document.getElementById("copyStatus");
+
+function myCopyFunction() {
+    navigator.clipboard.writeText(`https://gameworld-exam.netlify.app/html/post/details.html?id=${id}`);
+    statusCopy.style.visibility = "visible";
+    statusCopy.style.opacity = "0";
+    buttonCopy.style.display = "none";
 }
 
+buttonCopy.addEventListener('click', myCopyFunction);
+}
 
 
 
